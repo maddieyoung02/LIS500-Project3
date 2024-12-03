@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Heroes!</title>
+    <title>Machine Learning</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,44 +12,89 @@
         <a class="tablink" href="index.html">Home</a>
         <a class="tablink" href="about.html">About Our Team</a>
         <a class="tablink" href="interpretations.html">Intersectionality and Implicit Bias Tests</a>
-        <a class="tablink active" href="heroes.html">Our Tech Heroes</a>
-        <a class="tablink" href="machine.html">Our Machine</a>
+        <a class="tablink" href="heroes.html">Our Tech Heroes</a>
+        <a class="tablink active" href="machine.html">Our Machine</a>
 
     </div>
 
     <header>
-        <h1 class="large"> Our Teachable Machine... </h1>
+        <h1 class="large"> Project 3: Machine Learning </h1>
     </header>
 
-    <!-- we each write about our tech heroes and how they reflect intersectionality in the tech world -->
     <main>
-        <section class="team-member">
-            <img src="kimbryant.jpg" alt="Kimberly Bryant" class="member-photo">
-            <div class="member-description">
-                <h2>Kimberly Bryant</h2>
-                <p>One of my biggest inspirations in the tech world is Kimberly Bryant, the visionary founder of Girls Who Code. Her mission to close the gender gap in technology resonates deeply with me, and I admire her relentless drive to empower young women to embrace coding and innovation. Kimberly's accomplishments are truly remarkable, and it’s invigorating to witness a strong female leader making such a significant impact in an industry that often lacks diversity. I’m excited to dive into the course material, knowing it aligns with her vision and the broader goal of fostering success for women in tech. She addresses the unique challenges faced by women of color in the tech industry by focusing specifically on young Black girls, a group that experiences marginalization at the intersections of race and gender. This dual focus highlights how issues of gender disparity and racial inequality intersect to create distinct barriers for women of color in technology, which differ from those experienced by white women or men of color.</p>
+        <section class="machine-learning">
+            <img src="ml.jpeg" alt="ML graphic" class="ml-photo">
+            <div class="ml-description">
+                <h2>What is Machine Learning?</h2>
+                <p>In simple terms, machine learning is a way for computers to learn patterns and make decisions without being explicitly programmed for every task. It's like teaching a computer to recognize things by showing it examples.</p>
+                <h3>Type 1: Supervised Learning</h3>
+                <p>The computer learns from labeled examples - data where we already know the correct answers. For instance, if you're training a model to classify images of cats and dogs, you'd give it a dataset of images labeled as either "cat" or "dog." The computer uses these labels to learn how to make predictions on new, unseen images.</p>
+                <p>Key Features: input data and corresponding labels, and the goal is to predict the correct label for new data. </p>
+                <p> Examples: image classification, spam email detection, stock price detection.</p>
+
+                <h3>Type 2: Unsupervised Learning</h3>
+                <p>The computer gets data but no labels. It tries to find patterns, groupings, or structure on its own. For example, if you give it a bunch of images without labels, it might group them into clusters based on similarities, like grouping animals with fur together.</p>
+                <p>Key Features: input data (but no labels), and the goal is to find hidden patterns or groupings in the data.</p>
+                <p> Examples: customer segmentation, anomaly detection, clustering similar products.</p>
+
             </div>
         </section>
 
-        <section class="team-member">
-            <img src="timnit.jpg" alt="Dr. Timnit Gebru" class="member-photo">
-            <div class="member-description">
-                <h2>Dr. Timnit Gebru</h2>
-                <p>One of the most inspiring figures in the tech world for me is Dr. Timnit Gebru, a prominent computer scientist and advocate for diversity and ethics in artificial intelligence. Her work emphasizes the importance of representation in technology and the need to address the ethical implications of AI.
+        <section class=machine-learning">
+          <div class="ml-description">
+            <h2>Our Process</h2>
 
-As someone passionate about AI, I admire her efforts to challenge biases in AI systems. Dr. Gebru shows that technology can drive positive change when developed with ethical considerations and diverse perspectives. Her commitment to advocating for inclusivity in tech inspires me to engage more critically with the technologies we create. I’m excited to learn from her work and explore how we can contribute to a more equitable tech landscape. Dr. Timnit Gebru reflects intersectionality in tech by addressing the intertwined issues of race, gender, and ethics in artificial intelligence (AI) and the broader technology industry. As a Black woman in a field dominated by white men, she faces multiple layers of marginalization, and her work actively challenges these inequalities while advocating for the inclusion of diverse voices in the development of AI technologies.</p>
-            </div>
+            <h3>Step 1: Choosing our categories for the image classifcation:</h3>
+            <p>We started by choosing what categories we wanted our model to classify between... We chose elephants, ducks, and butterflies because they are diverse in their features—size, texture, and patterns—challenging the model to recognize distinct categories. This reflects themes in
+              Unmasking AI, where Joy Buolamwini stresses the importance of diversity and fairness in AI systems. By testing our model with such varied categories, we aimed to explore its limitations and better understand how biases in training data could affect its performance.</p>
+
+            <h4>Steps We Took to Address Bias and Fairness:</h4>
+            <p> 1. Diverse Data Sources: To promote fairness and inclusivity, we used a variety of images from different sources. For the main categories—elephants, ducks, and butterflies—we combined images found online with our own photos captured using a webcam. These home-captured images included objects that resembled or
+              represented these categories, ensuring a broader range of training data. </p>
+            <p> 2. Incorporating a 'Nothing' Category: We introduced a 'nothing' category to handle inputs that do not fit into any of the three main labels. For this category,
+              we provided the model with diverse data, including images of people's faces from various racial, age, and emotional groups,
+              as well as photos with different backgrounds and colors. This was a deliberate step to train the model to differentiate between unrelated
+              inputs and the core categories, reflecting the importance of minimizing false assumptions—a key
+              theme in Unmasking AI. </p>
+            <img src="step1.png" alt="Step 1" width=614.5 height=341>
+
+            <h4>How Our Efforts Relate to Themes in Unmasking AI:</h4>
+            <p>While our model is limited in scope, the care we took in building the dataset mirrors some of the larger concerns discussed in Unmasking AI. Joy Buolamwini highlights how biased or incomplete datasets lead to unfair outcomes in AI systems. In our case, we aimed to ensure that the model's training data was as diverse as possible, even within the constraints of a small-scale project. By including images representing different races, emotions, and backgrounds in the 'nothing' category, we addressed the issue of bias, albeit at a basic level, and reinforced the
+              importance of ethical considerations in AI development. </p>
+
+            <h3>Step 2: Training Our Model:</h3>
+            <img src="step2.png" alt="Step 2" width=652 height=341>
+
+            <h3>Step 3: Testing Our Model:</h3>
+            <img src="step3.png" alt="Step 3" width=675.5 height=334>
+
+          </div>
         </section>
-    </main>
+
+        <section class="machine-learning">
+          <div class="ml-description">
+            <h2>Try Our Model!</h2>
+            <p><a href="https://teachablemachine.withgoogle.com/models/32_WXU-yT/">
+              This will take you to our Teachable Machine Google Webpage --> </a></p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RdTEMP3-4GU?si=Osx5yg1Cw9Bim5Jr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </section>
+
+          <section>
+            <button onclick="window.location.href='model.html';" class="model-button">Go to Our Embedded Model</button>
+          </section>
+      </main>
+
 
     <!-- // our emails here -->
     <footer>
         <h2>Let's Keep in Touch!</h2>
         <div>
             <p> Maddie Young --- mhyoung3@wisc.edu</p>
-            <p> Daniel Laatsch --- drlaatsch@wisc.edu</p>
+            <p> Amit Diggavi --- diggavi@wisc.edu</p>
+            <p> Ella Pierce --- enpierce2@wisc.edu</p>
         </div>
-        <p>Copyright 2024 by Maddie Young and Daniel Laatsch</p>
+        <p>Copyright 2024 by Maddie Young, Amit Diggavi, and Ella Pierce</p>
     </footer>
 </body>
 </html>
