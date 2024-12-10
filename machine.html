@@ -27,40 +27,77 @@
             <div class="ml-description">
                 <h2>What is Machine Learning?</h2>
                 <p>In simple terms, machine learning is a way for computers to learn patterns and make decisions without being explicitly programmed for every task. It's like teaching a computer to recognize things by showing it examples.</p>
-                <h3>Type 1: Supervised Learning</h3>
-                <p>The computer learns from labeled examples - data where we already know the correct answers. For instance, if you're training a model to classify images of cats and dogs, you'd give it a dataset of images labeled as either "cat" or "dog." The computer uses these labels to learn how to make predictions on new, unseen images.</p>
-                <p>Key Features: input data and corresponding labels, and the goal is to predict the correct label for new data. </p>
-                <p> Examples: image classification, spam email detection, stock price detection.</p>
 
-                <h3>Type 2: Unsupervised Learning</h3>
-                <p>The computer gets data but no labels. It tries to find patterns, groupings, or structure on its own. For example, if you give it a bunch of images without labels, it might group them into clusters based on similarities, like grouping animals with fur together.</p>
-                <p>Key Features: input data (but no labels), and the goal is to find hidden patterns or groupings in the data.</p>
-                <p> Examples: customer segmentation, anomaly detection, clustering similar products.</p>
+                <div class="ml-types">
+                  <div class="ml-type-box">
+                    <h3>Type 1: Supervised Learning</h3>
+                    <p>The computer learns from labeled examples - data where we already know the correct answers. For instance, if you're training a model to classify images of cats and dogs, you'd give it a dataset of images labeled as either "cat" or "dog." The computer uses these labels to learn how to make predictions on new, unseen images.</p>
+                    <p>Key Features: input data and corresponding labels, and the goal is to predict the correct label for new data. </p>
+                    <p> Examples: image classification, spam email detection, stock price detection.</p>
+                  </div>
 
+                  <div class="ml-type-box">
+                    <h3>Type 2: Unsupervised Learning</h3>
+                    <p>The computer gets data but no labels. It tries to find patterns, groupings, or structure on its own. For example, if you give it a bunch of images without labels, it might group them into clusters based on similarities, like grouping animals with fur together.</p>
+                    <p>Key Features: input data (but no labels), and the goal is to find hidden patterns or groupings in the data.</p>
+                    <p> Examples: customer segmentation, anomaly detection, clustering similar products.</p>
+                  </div>
+              </div>
             </div>
         </section>
 
-        <section class=machine-learning">
+        <section class="machine-learning">
           <div class="ml-description">
+            <h2> Project Purpose: Teachable Machines - Exploring AI and Machine learning</h2>
+            <p> This project leverages Google's Teachable Machines tool to explore the basics of machine learning and artificial intelligence through
+              a hands-on approach. By creating our own image and voice classification algorithms, we aim to understand how AI can be trained to
+              recognize patterns, make predictions, and learn from data. Reflecting on the lessons from Dr. Joy Buolamwini's work in Unmasking AI,
+              this project highlights the importance of inclusivity, fairness, and transparency in AI development. Through this experience, we
+              deepen our understanding of the ethical challenges involved in building AI systems and the responsibility of developers to ensure their
+              technologies are equitable and unbiased. </p>
+
             <h2>Our Process</h2>
 
-            <h3>Step 1: Choosing our categories for the image classifcation:</h3>
+            <h3>Step 1: Choosing our categories for the image classification:</h3>
             <p>We started by choosing what categories we wanted our model to classify between... We chose elephants, ducks, and butterflies because they are diverse in their features—size, texture, and patterns—challenging the model to recognize distinct categories. This reflects themes in
               Unmasking AI, where Joy Buolamwini stresses the importance of diversity and fairness in AI systems. By testing our model with such varied categories, we aimed to explore its limitations and better understand how biases in training data could affect its performance.</p>
 
             <h4>Steps We Took to Address Bias and Fairness:</h4>
             <p> 1. Diverse Data Sources: To promote fairness and inclusivity, we used a variety of images from different sources. For the main categories—elephants, ducks, and butterflies—we combined images found online with our own photos captured using a webcam. These home-captured images included objects that resembled or
               represented these categories, ensuring a broader range of training data. </p>
-            <p> 2. Incorporating a 'Nothing' Category: We introduced a 'nothing' category to handle inputs that do not fit into any of the three main labels. For this category,
-              we provided the model with diverse data, including images of people's faces from various racial, age, and emotional groups,
-              as well as photos with different backgrounds and colors. This was a deliberate step to train the model to differentiate between unrelated
-              inputs and the core categories, reflecting the importance of minimizing false assumptions—a key
-              theme in Unmasking AI. </p>
+            <p> 2. Incorporating a 'Nothing' Category: We incorporated a 'Nothing' category to handle inputs that do not align with any of the three primary labels. To train this category effectively, we included diverse data such as images of human faces representing various racial, age, and emotional groups, alongside photos featuring different backgrounds and colors. This deliberate approach aimed to help the model distinguish unrelated inputs from the core categories, aligning with the emphasis on minimizing false assumptions—a key theme in Unmasking AI.
+              By including human faces, our goal was to ensure that if a person appears in an image or webcam feed, the model would not mistakenly classify them as a duck, elephant, or butterfly. This enhancement was essential to achieving high accuracy and reducing erroneous classifications. </p>
             <img src="step1.png" alt="Step 1" width=614.5 height=341>
 
             <h4>How Our Efforts Relate to Themes in Unmasking AI:</h4>
-            <p>While our model is limited in scope, the care we took in building the dataset mirrors some of the larger concerns discussed in Unmasking AI. Joy Buolamwini highlights how biased or incomplete datasets lead to unfair outcomes in AI systems. In our case, we aimed to ensure that the model's training data was as diverse as possible, even within the constraints of a small-scale project. By including images representing different races, emotions, and backgrounds in the 'nothing' category, we addressed the issue of bias, albeit at a basic level, and reinforced the
-              importance of ethical considerations in AI development. </p>
+            <p>Our project, while modest in scale, engages deeply with several critical themes from Unmasking AI, particularly those highlighted by Dr. Joy Buolamwini.
+              Her research underscores how biased datasets in AI systems can perpetuate systemic inequities and lead to unjust outcomes. Reflecting on this, we
+              deliberately designed our dataset with diversity and inclusivity at the forefront, even within the inherent constraints of a small-scale project.
+              This intentionality allowed us to grapple with the ethical challenges of bias in AI on a tangible level, offering a learning experience that resonates
+              with Buolamwini’s advocacy for fairness.</p>
+
+            <p>One of the most significant parallels between our work and Buolamwini’s findings lies in our approach to constructing the "nothing" category in the dataset.
+              By including images that represented a wide range of races, genders, emotional expressions, and environmental conditions, we aimed to create a model capable
+              of more equitable generalizations. However, this process also revealed the challenges of achieving true inclusivity in AI development. For instance, despite
+              our efforts, we recognized limitations in the availability of certain types of data, such as images representing nuanced cultural contexts. This shortfall
+              underscored the importance of Buolamwini's call for diverse representation in AI development teams—without input from individuals with a variety of lived
+              experiences, even well-meaning efforts can fall short.</p>
+
+            <p>Additionally, Buolamwini emphasizes the need for critical evaluation of AI systems' societal impacts, and our reflections on our project mirror this theme.
+              During the model evaluation phase, we observed minor disparities in the system’s accuracy across different demographic groups. While these findings were not
+              unexpected, they prompted us to think more critically about how such disparities, even on a small scale, could compound in larger systems with real-world
+              consequences. This reflection highlighted the ethical responsibility of developers to test for and address these disparities proactively, a practice often
+              neglected in the rush to deploy new technologies</p>
+
+            <p>Through this process, we also became more acutely aware of the limitations of technical solutions alone in addressing AI bias. While diverse datasets are
+              crucial, they are not a panacea; structural issues such as unequal access to technology, entrenched societal biases, and lack of accountability in AI
+              governance must also be addressed. This broader perspective helped us see our project as part of a larger conversation about ethical AI development,
+              emphasizing that technical efforts must be paired with advocacy and systemic change.</p>
+
+            <p> Ultimately, our project served as both a practical exercise and a reflective journey into the complexities of ethical AI development. By actively engaging
+              with Buolamwini’s work, we not only improved the inclusivity of our dataset but also deepened our understanding of the societal stakes of AI technology.
+              This reflection reinforces the necessity of ongoing critical analysis, transparency, and advocacy to ensure that AI systems serve as tools for equity rather
+              than perpetuators of injustice. </p>
 
             <h3>Step 2: Training Our Model:</h3>
             <img src="step2.png" alt="Step 2" width=652 height=341>
@@ -80,9 +117,9 @@
             </div>
           </section>
 
-          <section>
-            <button onclick="window.location.href='model.html';" class="model-button">Go to Our Embedded Model</button>
-          </section>
+          <!-- <section>
+            <button onclick="window.location.href='e.html';" class="model-button">Go to Our Embedded Model</button>
+          </section> -->
       </main>
 
 

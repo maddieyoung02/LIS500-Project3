@@ -11,38 +11,45 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f4f8; /* Light background color */
+    background-color: #f4f7fc; /* Light background color */
     color: #333; /* Darker text for better readability */
     line-height: 1.6; /* Improved line spacing */
+    padding-bottom: 40px; /* Space at the bottom for footer */
 }
 
 /* Centering header and footer content */
 header, footer {
     text-align: center;
-    background: #c8ebf5; /* Lighter blue background color */
-    color: black;
+    background: #00aaff; /* Lighter blue background color */
+    color: white;
     padding: 20px 0; /* Padding for header and footer */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+header {
+    border-bottom: 4px solid #007bb5; /* Border for header */
 }
 
 /* Main Title */
 .large {
-    font-size: 2.5em; /* Larger font size for the main title */
+    font-size: 2.8em; /* Larger font size for the main title */
     margin: 0; /* Remove default margin */
+    font-weight: bold;
 }
 
 /* Tabs Styles */
 .tabs {
     display: flex;
     justify-content: center; /* Center tabs */
-    background-color: #6ab0e8; /* Lighter tab background color */
-    padding: 10px 0; /* Padding around the tabs */
-    border-bottom: 2px solid #ccc; /* Bottom border for tabs */
+    background-color: #007bb5; /* Lighter tab background color */
+    padding: 12px 0; /* Padding around the tabs */
+    border-bottom: 3px solid #ccc; /* Bottom border for tabs */
 }
 
 .tablink {
     flex: 1; /* Make each tab take up equal space */
     text-align: center; /* Center text within the tabs */
-    padding: 14px 20px; /* Vertical and horizontal padding for tabs */
+    padding: 15px 20px; /* Vertical and horizontal padding for tabs */
     text-decoration: none;
     color: white; /* Text color */
     background-color: inherit;
@@ -50,76 +57,150 @@ header, footer {
     outline: none;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    font-size: 17px;
-    margin: 0 5px; /* Space between tabs */
+    font-size: 18px;
+    margin: 0 8px; /* Space between tabs */
     border-radius: 5px; /* Rounded corners */
 }
 
 .tablink:hover {
-    background-color: #98d4e5; /* Slightly darker blue for hover effect */
+    background-color: #0099cc; /* Slightly darker blue for hover effect */
 }
 
 .tablink.active {
-    background-color: #98d4e5; /* Active tab color */
+    background-color: #005f7f; /* Active tab color */
     font-weight: bold; /* Highlight active tab */
 }
 
 /* Main Content Styles */
 main {
-    max-width: 800px; /* Limit max width for better readability */
+    max-width: 1000px; /* Increased max width for better readability */
     margin: 20px auto; /* Center main content */
-    padding: 20px; /* Padding inside main */
+    padding: 40px; /* Padding inside main */
     background: white; /* White background for main content */
-    border-radius: 8px; /* Rounded corners for main content */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    padding-left: 40px;  /* Wider left padding */
-    padding-right: 40px; /* Wider right padding */
-}
-/* Team Member Styles */
-.team-member {
-    display: flex; /* Use flexbox for side-by-side layout */
-    align-items: center; /* Center items vertically */
-    margin-bottom: 20px; /* Space between team members */
+    border-radius: 10px; /* Rounded corners for main content */
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding-left: 50px;  /* Wider left padding */
+    padding-right: 50px; /* Wider right padding */
+    line-height: 1.8; /* Increase line height for readability */
 }
 
-.member-photo {
-    width: 300px; /* Fixed width for images */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 20px; /* Space between photo and description */
+/* Machine Learning Section */
+.machine-learning {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+    margin-bottom: 30px;
 }
 
-.member-description {
-    max-width: 500px; /* Limit width of description */
+.ml-description {
+    max-width: 850px; /* Limit width of description */
+    margin-top: 20px; /* Spacing from image */
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .team-member {
-        flex-direction: column; /* Stack elements on smaller screens */
-        align-items: flex-start; /* Align items to the left */
-    }
-
-    .member-photo {
-        margin-right: 0; /* Remove margin for stacking */
-        margin-bottom: 10px; /* Space below image */
-    }
+/* Image Styles */
+.ml-photo, .member-photo {
+    width: 100%;
+    height: auto;
+    max-width: 400px; /* Limit image width */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for images */
+    margin-top: 20px; /* Space above images */
 }
 
-/* Section Heading Styles */
-section {
-    margin-bottom: 20px; /* Space between sections */
+.step-image {
+  width: 100%;
+  height: auto;
+  max-width: 800px; /* Limit image width */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for images */
+  margin-top: 20px; /* Space above images */
+
 }
 
+/* Heading Styles */
 h2 {
-    font-size: 1.8em; /* Slightly larger font for section headings */
-    color: #2c3e50; /* Darker color for headings */
+    font-size: 2em; /* Larger font for section headings */
+    color: #333; /* Darker color for headings */
+    margin-bottom: 15px;
+}
+
+h3, h4 {
+    color: #007bb5; /* Blue color for sub-headings */
+    font-weight: normal;
 }
 
 /* Footer Styles */
 footer p {
-    margin: 5px 0; /* Space between footer paragraphs */
+    margin: 10px 0; /* Space between footer paragraphs */
+    font-size: 0.9em; /* Smaller text for footer */
 }
 
 footer h2 {
     margin: 10px 0; /* Space above the footer heading */
+}
+
+/* Link Styles */
+a {
+    color: #007bb5; /* Blue links */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Button Styles */
+button {
+    background-color: #007bb5; /* Blue button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #005f7f; /* Darker blue on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column; /* Stack tabs vertically */
+        padding: 10px; /* Less padding on small screens */
+    }
+
+    .tablink {
+        flex: unset; /* Remove equal flex space for tabs */
+        padding: 12px 20px; /* Padding for smaller screen */
+        font-size: 16px; /* Smaller font size */
+    }
+
+    main {
+        padding: 20px; /* Less padding for small screens */
+        max-width: 90%; /* Reduce width */
+    }
+
+    .ml-description {
+    width: 100%;
+    max-width: 1200px;
+}
+
+  .ml-types {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+  }
+
+  .ml-type-box {
+      flex: 1; /* Ensures both boxes take equal width */
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #f9f9f9;
+  }
 }
